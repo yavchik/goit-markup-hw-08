@@ -1,0 +1,105 @@
+:root {
+    --color-primary: #212121;
+    --color-secondary: #757575;
+    --accent-color: #2196F3;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-bcg: #2F303A;
+    --btn-color-active: #188CE8;
+}
+
+body {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-family: 'Roboto',sans-serif;
+    background-color: var(--color-white);
+    letter-spacing: 0.03em;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.logo {
+    color: var(--color-black);
+    font-family: 'Raleway' sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.logo-blue {
+    color:var(--accent-color);
+}
+
+.site-nav .link {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+    color: var(--accent-color);
+}
+
+.site-nav .link.current {
+    color: var(--accent-color);
+}
+
+.contact .link {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.contact .link:hover,
+.contact .link:focus {
+    color: var(--accent-color);
+}
+
+.hero {
+    background-color: var(--color-bcg)
+}
+
+.hero-title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--color-white);
+    background-color: var(--accent-color)
+}
+
+.btn:hover {
+    background-color: var(--btn-color-active);
+    cursor: pointer;
+}
+
+.btn-primary {
+    font-weight: 700;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    background-color: var(--accent-color);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
