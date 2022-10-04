@@ -17,19 +17,27 @@ body {
     letter-spacing: 0.03em;
 }
 
-.link.current {
+.nav-link.current {
     color: var(--accent-color);
-}
-
-
-.list {
-    list-style-type: none;
 }
 
 .link {
     color: inherit;
     text-decoration: none;
 }
+
+
+.nav-link {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color)
+}
+
+.list {
+    list-style-type: none;
+}
+
 
 
 .visually-hidden {
@@ -123,7 +131,7 @@ body {
 }
 
 .text {
-    line-height: 2;
+    line-height: 1.71;
 }
 
 
