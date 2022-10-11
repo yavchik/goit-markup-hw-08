@@ -201,9 +201,6 @@ img {
   gap: 30px;
 }
 
-.section-benefits .item:not(:last-child) {
-    margin-right: 30px;
-}
 
 .benefits-item {
     max-width: 270px;
@@ -288,14 +285,11 @@ img {
 
 .description {
     font-size: 16px;
-    
 }
 
 /* Портфоліо */
 
-.section {
-    padding: 94px 0;
-}
+
 
 .tabs-list {
     display: flex;
