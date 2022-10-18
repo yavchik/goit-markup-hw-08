@@ -473,6 +473,7 @@ img {
 }
 
 .link-card {
+    display: block;
     text-decoration: none;
     color: var(--primary-text-color);
 }
