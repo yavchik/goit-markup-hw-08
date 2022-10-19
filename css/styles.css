@@ -179,6 +179,8 @@ img {
 /* Герой */
 
 .hero {
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 200px 0;
     background-color: var(--bg-hero);
     text-align: center;
@@ -221,10 +223,11 @@ img {
 }
 
 .thumb {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    text-align: center;
     background-color: var(--bg-secondary);
     border-radius: 4px;
 }
@@ -324,57 +327,55 @@ img {
 
 .social-list {
     display: flex;
-    padding-top: 16px;
+    margin-top: 16px;
     justify-content: center;
     gap: 10px;
 }
 
 
 
-.section-team .icon-link {
+.team-link {
     width: 44px;
     height: 44px;
-}
-
-.icon-link {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    fill: var(--social-primary-color)
+    border-radius: 50%;
+    color: var(--social-primary-color)
 }
 
 
 
 
     
-.team-list .icon-link:hover,
-.team-list .icon-link:focus {
+.team-link:hover,
+.team-link:focus {
+    color: var(--text-white);
     background-color: var(--accent-color);
-    border-radius: 50%;
 }
 
-.team-list .icon-link:hover .social-icon,
-.team-list .icon-link:focus .social-icon {
-    fill: var(--text-white);
+.social-icon {
+    fill: currentColor; 
 }
 
 /* Постоянные клиенты */
 
-.customers-list .icon-link {
+.customers-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 170px;
     height: 92px;
+    border: 1px solid var(--social-primary-color);
+    border-radius: 4px;
+
 }
 
-.section-customers .icon-link:hover .customers-icon,
-.section-customers .icon-link:focus .customers-icon {
-    fill: var(--accent-color);
-}
 
-.section-customers .icon-link:hover,
-.section-customers .icon-link:focus {
+.customers-link:hover,
+.customers-link:focus {
     border-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .customers-list {
@@ -386,14 +387,11 @@ img {
     margin-right: 30px;
 }
 
-.customers-list .link {
-    border: 1px solid var(--social-primary-color);
-    border-radius: 4px;
-}
 
 .customers-icon {
     width: 106px;
     height: 60px;
+    fill: currentColor;
 }
 
 
@@ -421,7 +419,8 @@ img {
 }
 
 
-.btn-light:hover {
+.btn-light:hover, 
+.btn-light:focus {
     color: var(--text-white);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -517,7 +516,7 @@ img {
 
 .footer-container {
     display: flex;
-    gap: 10px;
+    gap: 70px;
     align-items: baseline;
 }
 
@@ -529,11 +528,7 @@ img {
 }
 
 .footer-title {
-    display: block;
-    margin-top: 0;
     margin-bottom: 20px;
-
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
