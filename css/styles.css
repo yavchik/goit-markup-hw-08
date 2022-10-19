@@ -366,6 +366,7 @@ img {
     justify-content: center;
     width: 170px;
     height: 92px;
+    color: var(--social-primary-color);
     border: 1px solid var(--social-primary-color);
     border-radius: 4px;
 
