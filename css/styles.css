@@ -695,6 +695,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translate(-50%, -50%);
     min-width: 528px;
     min-height: 581px;
+    
     background-color: var(--text-white);
     border-radius: 4px;
     transition-property: transform;
