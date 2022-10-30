@@ -15,6 +15,8 @@
     --img-background: #c4c4c4;
 
     --pudding-section: 94px;
+
+    --input-border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 body {
@@ -621,8 +623,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .footer-container {
     display: flex;
-    gap: 70px;
     align-items: baseline;
+}
+
+.footer-control {
+    margin-right: 70px;
 }
 
 /* Соц.футер */
@@ -634,6 +639,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .footer-title {
     margin-bottom: 20px;
+    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -663,6 +669,64 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .footer-icon {
     fill: currentColor;
 }
+
+.control-subscribe {
+    margin-left: 93px;
+}
+
+.form-subscribe {
+    display: flex;
+}
+
+
+.input-subscribe {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: var(--bg-hero);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+}
+
+.button-subscribe {
+    display: flex;
+    margin-left: 12px;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--text-white);
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--accent-color);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-subscribe:hover,
+.button-subscribe:focus {
+    background-color: var(--btn-color-active);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.icon-subscribe {
+    fill: currentColor;
+}
+
+/* Модалка */
 
 .backdrop {
     position: fixed;
@@ -695,7 +759,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translate(-50%, -50%);
     min-width: 528px;
     min-height: 581px;
-    
+    padding: 40px;
     background-color: var(--text-white);
     border-radius: 4px;
     transition-property: transform;
@@ -716,6 +780,165 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 50%;
     background-color: var(--text-white);
     cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    fill: var(--accent-color);
+}
+
+.header-modal {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--title-text-color);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 12px 12px 30px;
+    border: var(--input-border);
+    border-radius: 4px;
+    outline: none;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+    border-color: var(--accent-color);
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: var(--title-text-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .form-icon {
+    fill: var(--accent-color);
+}
+
+.form-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    resize: none;
+}
+
+.form-textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.checkbox-control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-input {
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-weight: 400;
+    line-height: 1.7;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-icon {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 3px;
+}
+
+.check-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--text-white);
+}
+
+.check-icon {
+    fill: currentColor;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.checkbox-link {
+    color: var(--accent-color);
+}
+
+.button-send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 200px;
+    height: 50px;
+    padding: 10px 52px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--text-white);
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--accent-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-send:hover,
+.button-send:focus {
+    background-color: var(--btn-color-active);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 
