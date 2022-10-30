@@ -889,8 +889,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .checkbox-icon {
     width: 16px;
     height: 15px;
-    border: 2px solid var(--primary-text-color);
-    border-radius: 3px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
 }
 
 .check-icon {
