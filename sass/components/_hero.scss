@@ -1,0 +1,35 @@
+.hero {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 200px 0;
+    background-color: var(--bg-hero);
+    text-align: center;
+    background-image: linear-gradient(var(--img-overlay), var(--img-overlay)),
+        url(../images/герой.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero__title {
+    max-width: 696px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-white);
+}
+
+.hero__button {
+    min-width: 216px;
+    font-weight: 700;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    padding: 10px 32px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
