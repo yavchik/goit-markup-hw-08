@@ -1,35 +1,65 @@
 .hero {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 200px 0;
-    background-color: var(--bg-hero);
-    text-align: center;
+  margin: 0 auto;
+  padding: 118px 0;
+  background-color: var(--bg-hero);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(var(--img-overlay), var(--img-overlay)),
+    url(../images/herosm.jpg);
+
+  @include mq(retina) {
     background-image: linear-gradient(var(--img-overlay), var(--img-overlay)),
-        url(../images/герой.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+      url(../images/herosm2x.jpg);
+  }
+
+  @include mq(tablet) {
+    background-image: linear-gradient(var(--img-overlay), var(--img-overlay)),
+      url(../images/heromd.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(var(--img-overlay), var(--img-overlay)),
+        url(../images/heromd2x.jpg);
+    }
+  }
+
+  @include mq(desktop) {
+    background-image: linear-gradient(var(--img-overlay), var(--img-overlay)),
+      url(../images/herolg.jpg);
+    max-width: 1600px;
+    padding: 200px 0;
+
+    @include mq(retina) {
+      background-image: linear-gradient(var(--img-overlay), var(--img-overlay)),
+        url(../images/herolg2x.jpg);
+    }
+  }
 }
 
 .hero__title {
+  width: 360px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-white);
+
+  @include mq(desktop) {
     max-width: 696px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.4;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--text-white);
+  }
 }
 
 .hero__button {
-    min-width: 216px;
-    font-weight: 700;
-    line-height: 1.9;
-    letter-spacing: 0.06em;
-    padding: 10px 32px;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 216px;
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  padding: 10px 32px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

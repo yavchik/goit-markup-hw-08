@@ -1,60 +1,83 @@
 .footer {
-    padding: 60px 0;
-    color: var(--text-footer);
-    background-color: var(--bg-hero);
+  padding: 60px 0;
+  color: var(--text-footer);
+  background-color: var(--bg-hero);
 }
 
 .footer__container {
+  @include mq(tablet) {
     display: flex;
     align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  @include mq(tablet-only) {
+    justify-content: space-around;
+  }
+
+  @include mq(not-desktop) {
+    text-align: center;
+  }
 }
 
-.footer--right {
+.footer__wrapper {
+  @include mq(not-desktop) {
+    margin-bottom: 60px;
+  }
+
+  @include mq(desktop) {
     margin-right: 70px;
+  }
 }
 
 .footer__logo {
-    display: block;
-    margin-bottom: 20px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .address {
-    line-height: 1.7;
-    font-style: normal;
+  line-height: 1.7;
+  font-style: normal;
 }
 
 .address__item:not(:last-child) {
-    margin-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .footer__logo,
 .address__link {
-    color: var(--text-white);
+  color: var(--text-white);
 }
 
 .address__link:hover,
 .address__link:focus {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .address__link {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address__link--textcolor {
-    color: var(--text-footer);
+  color: var(--text-footer);
 }
 
 /* Соц.футер */
 
-.social-list {
+.footer-social {
+  @include mq(mobile-only) {
+    margin-bottom: 60px;
+  }
+
+  &__list {
     display: flex;
     gap: 10px;
-}
+    justify-content: center;
+  }
 
-.footer__title {
+  &__title {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -62,9 +85,9 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--text-white);
-}
+  }
 
-.social-list__link {
+  &__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -76,63 +99,80 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  }
 
-.social-list__link:hover,
-.social-list__link:focus {
+  &__link:hover,
+  &__link:focus {
     background-color: var(--accent-color);
-}
+  }
 
-.social-list__icon {
+  &__icon {
     fill: currentColor;
+  }
 }
 
 .control-subscribe {
-    margin-left: 93px;
+  @include mq(desktop) {
+    margin-left: auto;
+  }
 }
 
 .form-subscribe {
+  margin-top: 20px;
+
+  @include mq(desktop) {
     display: flex;
+    align-items: center;
+  }
 }
 
 .form-subscribe__input {
+  max-width: 450px;
+  width: 100%;
+  height: 50px;
+  padding: 15px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--bg-hero);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+
+  @include mq(desktop) {
     width: 358px;
-    height: 50px;
-    padding: 15px 16px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.6);
-    background-color: var(--bg-hero);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    outline: none;
+  }
+
+  @include mq(not-desktop) {
+    margin-bottom: 20px;
+  }
 }
 
 .form-subscribe__button {
-    display: flex;
-    margin-left: 12px;
-    gap: 12px;
-    justify-content: center;
-    align-items: center;
-    min-width: 200px;
-    height: 50px;
-    font-weight: 700;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-    transition-property: background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    border: none;
+  margin-left: 12px;
+  gap: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  height: 50px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
 }
 
 .form-subscribe__button:hover,
 .form-subscribe__button:focus {
-    background-color: var(--btn-color-active);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--btn-color-active);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .form-subscribe__icon {
-    fill: currentColor;
+  fill: currentColor;
 }

@@ -1,67 +1,73 @@
 .cards-team {
-    background-color: var(--bg-secondary);
-}
+  background-color: var(--bg-secondary);
 
-.cards-team__list {
-    display: flex;
+  &__list {
+    @include card-set;
+  }
 }
 
 .cards-team__item {
-    max-width: 270px;
-    background-color: var(--text-white);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+  display: flex;
+  flex-wrap: wrap;
+  @include f-center;
+  background-color: var(--text-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @include mq(tablet) {
+    @include card-set-item(2);
+  }
+
+  @include mq(desktop) {
+    @include card-set-item(4);
+  }
 }
 
 .card-control {
-    padding: 30px 0;
-}
-
-.cards-team__list {
-    gap: 30px;
+  padding: 30px 0;
 }
 
 .cards-team__description {
-    text-align: center;
-    font-size: 16px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .cards-team__name {
-    text-align: center;
-    margin-bottom: 10px;
-    line-height: 1.16;
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--title-text-color);
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.16;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--title-text-color);
 }
 
 .meta-list {
-    display: flex;
-    margin-top: 16px;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .meta-list__link {
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: var(--social-primary-color);
-    transition-property: color, background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--social-primary-color);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .meta-list__link:hover,
 .meta-list__link:focus {
-    color: var(--text-white);
-    background-color: var(--accent-color);
+  color: var(--text-white);
+  background-color: var(--accent-color);
 }
 
 .meta-list__icon {
-    fill: currentColor;
+  fill: currentColor;
 }
